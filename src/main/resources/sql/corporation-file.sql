@@ -12,3 +12,5 @@ create table tbl_corporation_file(
 );
 
 select * from tbl_corporation_file;
+
+alter table tbl_corporation_file add column corporation_file_type varchar(255) default 'code';

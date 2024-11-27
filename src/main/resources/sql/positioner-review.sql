@@ -12,6 +12,16 @@ create table tbl_positioner_review (
 select *
 from tbl_positioner_review;
 
+ALTER TABLE tbl_positioner_review
+    DROP FOREIGN KEY fk_positioner_review_position;
+ALTER TABLE tbl_positioner_review
+    DROP COLUMN notice_id,
+    DROP COLUMN position_id,
+    DROP COLUMN evaluation_id,
+    ADD COLUMN apply_id BIGINT UNSIGNED NOT NULL,
+    ADD CONSTRAINT fk_positioner_review_apply FOREIGN KEY (apply_id) REFERENCES tbl_apply(id);
+
+
 ALTER TABLE tbl_inquiry
     MODIFY created_date DATETIME DEFAULT CURRENT_TIMESTAMP;
 
