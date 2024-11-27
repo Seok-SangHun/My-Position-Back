@@ -11,6 +11,6 @@ public class NotFoundError implements ErrorController {
     @GetMapping("/error")
     public String handleError() {
 //        return new RedirectView("/member/login");
-        return "/404/404";
+        return "404/404";
     }
 }

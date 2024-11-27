@@ -21,6 +21,7 @@ create table  tbl_notice(
 
 select * from tbl_notice;
 
+
 drop table tbl_notice;
 ALTER TABLE TBL_NOTICE
     add COLUMN notice_read_count int default 0;
