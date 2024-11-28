@@ -180,7 +180,6 @@ public class MemberController {
     @GetMapping("/")
     public String goToMain(MemberDTO memberDTO, HttpSession session){
 //        session.invalidate();
-        log.info("=================================");
         return "main/body";
     }
     // 로그인한 멤버 정보 확인

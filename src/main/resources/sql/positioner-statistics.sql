@@ -16,3 +16,5 @@ create table tbl_positioner_statistics (
     constraint fk_positioner_statistics_review foreign key (positioner_review_id)      # 포지셔너 후기 외래 키 제약 조건
         references tbl_positioner_review(id)
 );
+
+drop table tbl_positioner_statistics;

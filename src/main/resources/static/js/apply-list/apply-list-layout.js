@@ -6,7 +6,7 @@ const positionBtn = document.getElementById("position-btn");
 const reviewBtn = document.getElementById("review-btn");
 const statusInput = document.getElementById("apply-status");
 const loadingScreen = document.getElementById("ingRecruitLoading"); // 로딩 화면 요소
-const sortingSelect = document.querySelector(".InpBox.sorting-select");
+const sortingSelect = document.querySelector(".sorting-select select");
 const uploadBtn = document.getElementById("uploadBtn");
 
 const showApplyList = ({applies, pagination,ongoingCount, closedCount}) =>{
@@ -415,6 +415,7 @@ const hideLoading = () => {
 /// 공고 목록 로드 함수
 const loadApplies = (page = 1, order = 'recent', status = statusInput.value) => {
     console.log(statusInput.value);
+    console.log(order);
     showLoading(); // 로딩 화면 표시
     applyService.getApplyList(page, order, status, (data) => {
         showApplyList(data, status);
@@ -444,15 +445,15 @@ reviewBtn.addEventListener("click", () => {
 
 // 페이지 전환 함수
 function goToPage(page) {
-    // const order = sortingSelect.value; // 드롭다운에서 선택된 정렬 기준을 가져옵니다. 추가할떄 아래에도 order 추가
+    const order = sortingSelect.value; // 드롭다운에서 선택된 정렬 기준을 가져옵니다. 추가할떄 아래에도 order 추가
     const status = statusInput.value; // 현재 상태 값을 가져옵니다.
-    loadApplies(page, status); // 상태를 유지하면서 공고 목록 로드
+    loadApplies(page,order, status); // 상태를 유지하면서 공고 목록 로드
 }
 
 // 드롭다운 변경 시 공고 목록 로드
-// sortingSelect.addEventListener("change", () => {
-//     loadApplies(1, sortingSelect.value); // 기본 정렬 기준으로 목록 로드
-// });
+sortingSelect.addEventListener("change", () => {
+    loadApplies(1, sortingSelect.value); // 기본 정렬 기준으로 목록 로드
+});
 
 // 페이지 로드 시 공고 목록 가져오기
 document.addEventListener('DOMContentLoaded', () => {

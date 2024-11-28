@@ -38,8 +38,8 @@ INSERT INTO tbl_notice (
     notice_end_date,
     notice_job_category_name
 ) VALUES (
-             1,  -- Example corporation ID (should be an existing ID in tbl_corporation)
-             '이건',  -- Notice title
+             4,  -- Example corporation ID (should be an existing ID in tbl_corporation)
+             '마감된 공고',  -- Notice title
              '신입',  -- Career level
              '대졸',  -- Minimum education requirement
              '2024-11-01 09:00:00',  -- Work start date (YYYY-MM-DD HH:MM:SS)
@@ -47,7 +47,7 @@ INSERT INTO tbl_notice (
              '09:00:00',  -- Work start time (HH:MM:SS)
              '18:00:00',  -- Work end time (HH:MM:SS)
              '2024-10-31 23:59:59',  -- Notice end date (YYYY-MM-DD HH:MM:SS)
-             '소프트웨어 개발'  -- Job category name
+             '경영기획'  -- Job category name
          );
 
 

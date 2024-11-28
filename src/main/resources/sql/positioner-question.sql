@@ -9,9 +9,9 @@ create table tbl_positioner_question(
 
 select *
 from tbl_positioner_question;
-
+drop table tbl_positioner_question;
 INSERT INTO tbl_positioner_question (question_content, answer_content, positioner_review_id)
 VALUES
-    ('What technology stack was used?', 'Java, Spring Boot, MySQL', 1),
-    ('How long was the internship?', '3 months', 1);
+    ('면접에서 가장 중요한 것은 무엇인가요?', '적절한 준비와 자신감입니다.', 3),
+    ('지원서에서 가장 주의해야 할 점은?', '진실된 내용 기입이 중요합니다.', 3);
 

@@ -15,9 +15,9 @@
         />
     </head>
     <body>
-    <form th:action="@{corporation/position-review}" method="post" th:object="${corporationReviewDTO}" name="corporationReviewForm">
+    <form th:action="@{/corporation/position-review}" method="post" th:object="${corporationReviewDTO}" name="corporationReviewForm">
         <input type="hidden" name="applyId" th:value="${apply.applyId}">
-        <header th:replace="~{/corporation/corporation-login-header :: #header}"></header>
+        <header th:replace="~{corporation/corporation-login-header :: #header}"></header>
         <div
             id="interview-write-sri-section"
             class="interview-write-layout-full"

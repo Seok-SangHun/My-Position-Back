@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const clickedButton = event.target.closest(".BtnType");
 
             if (clickedButton) {
-                console.log("Clicked button:", clickedButton);
-                console.log("Parent li:", clickedButton.parentElement);
+                // console.log("Clicked button:", clickedButton);
+                // console.log("Parent li:", clickedButton.parentElement);
 
                 // 모든 li에서 Select 클래스 제거
                 document.querySelectorAll(".TabBox li").forEach((li) => {

@@ -95,7 +95,7 @@ public class ApplyServiceImpl implements ApplyService{
 
     @Override
     public void uploadCertificationFile(MultipartFile file, Long applyId) throws IOException {
-        String rootPath = "C:/upload/" + getPath();
+        String rootPath = "/home/ubuntu/upload/" + getPath();
         FileDTO fileDTO = new FileDTO();
         CertificationFileDTO certificationFileDTO = new CertificationFileDTO();
 

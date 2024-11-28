@@ -145,7 +145,7 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public FileDTO uploadFile(MultipartFile file) throws IOException {
-        String rootPath = "C:/upload/" + getPath();
+        String rootPath = "/home/ubuntu/upload/" + getPath();
         FileDTO fileDTO = new FileDTO();
         UUID uuid = UUID.randomUUID();
 

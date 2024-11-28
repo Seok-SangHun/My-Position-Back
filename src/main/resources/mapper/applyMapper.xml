@@ -20,10 +20,9 @@
         </if>
         order by
         <choose>
-            <when test="pagination.order == 'recent'.toString()">apply_id</when>
-            <otherwise>notice_end_date</otherwise>
+            <when test="pagination.order == 'recent'.toString()">created_date desc</when>
+            <otherwise>created_date asc</otherwise>
         </choose>
-        desc
         limit #{pagination.startRow}, #{pagination.rowCount}
     </select>
 

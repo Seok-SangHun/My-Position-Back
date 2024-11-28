@@ -10,5 +10,3 @@ create table tbl_corporation_review(
 );
 
 select * from tbl_corporation_review;
-
-

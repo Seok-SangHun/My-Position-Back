@@ -21,13 +21,14 @@ select * from tbl_resume;
 INSERT INTO tbl_resume (
     member_id,
     education_id,
-    job_categoryC_id
+    job_categoryC_id,
+    resume_status,
+    resume_title
 ) VALUES (
-             3,    -- member_id (tbl_member 테이블의 회원 ID)
+             12,    -- member_id (tbl_member 테이블의 회원 ID)
              1,    -- education_id (tbl_education 테이블의 교육 ID)
-             1     -- job_categoryC_id (tbl_job_categoryC 테이블의 직업 분류 ID)
+             1,     -- job_categoryC_id (tbl_job_categoryC 테이블의 직업 분류 ID),
+            '대표',
+            '최선을 다하겠습니다.'
+
          );
-alter table tbl_resume add column created_date datetime default current_timestamp;
-alter table tbl_resume add column updated_date datetime default current_timestamp;
-alter table tbl_resume add column resume_status varchar(255) default '일반';
-alter table tbl_resume add column resume_title varchar(255);

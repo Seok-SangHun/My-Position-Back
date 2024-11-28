@@ -10,7 +10,7 @@
     <select id="selectRepresentativeByMemberId">
         select id, member_id,education_id,job_categoryC_id,resume_status, resume_title, created_date, updated_date
         from tbl_resume
-        where id = #{memberId}
+        where member_id = #{memberId}
         and resume_status = '대표'
     </select>
 

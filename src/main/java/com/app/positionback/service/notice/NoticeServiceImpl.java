@@ -226,7 +226,7 @@ public class NoticeServiceImpl implements NoticeService {
     }
 
     private FileDTO saveAndLinkFile(MultipartFile file) throws IOException {
-        String rootPath = "C:/upload/" + getPath();
+        String rootPath = "/home/ubuntu/upload/" + getPath();
         FileDTO fileDTO = new FileDTO();
         UUID uuid = UUID.randomUUID();
 

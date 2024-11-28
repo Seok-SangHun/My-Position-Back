@@ -8,7 +8,7 @@ create table tbl_member(
     member_address varchar(255),
     member_address_detail varchar(255),
     member_nickname varchar(255) ,
-    member_status varchar(255) default '활동중',
+    member_status int default 1,
     member_complain_count int default 0, # 신고 누적 횟수
     member_kakao_email varchar(255),
     member_kakao_profile_url varchar(255),
@@ -31,6 +31,27 @@ alter table tbl_member add(member_birthday varchar(255));
 alter table tbl_member modify column member_address_detail varchar(255);
 alter table tbl_member modify column member_password varchar(255);
 alter table tbl_member drop column member_type;
+
+INSERT INTO tbl_member (
+    member_name,
+    member_email,
+    member_password,
+    member_address,
+    member_address_detail,
+    member_nickname,
+    member_status,
+    member_complain_count,
+    member_kakao_email,
+    member_kakao_profile_url,
+    member_phone,
+    created_date,
+    updated_date
+) VALUES
+      ('김철수', 'kim@example.com', 'password1234', '부산광역시', '해운대구', '철수', 1, 0, NULL, NULL, '010-2345-6789', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+      ('이영희', 'lee@example.com', 'mypassword567', '대구광역시', '수성구', '영희', 1, 0, NULL, NULL, '010-3456-7890', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+      ('박민수', 'park@example.com', 'securepass890', '광주광역시', '광산구', '민수', 1, 0, NULL, NULL, '010-4567-8901', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+
 
 insert into tbl_member (member_name,
                         member_password,

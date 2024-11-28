@@ -9,3 +9,9 @@ create table tbl_evaluation (
 select * from tbl_evaluation;
 
 
+INSERT INTO tbl_evaluation (evaluation_overall, evaluation_difficulty, evaluation_result) VALUES
+    ('매우 좋음', '어려움', '수료'),
+    ('보통', '쉬움', '수료'),
+    ('좋음', '보통', '수료'),
+    ('우수함', '어려움', '수료'),
+    ('불만족', '매우 어려움', '불합격');

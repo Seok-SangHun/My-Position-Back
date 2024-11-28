@@ -29,7 +29,7 @@ public class ComplainController {
         ApplyDTO applyDTO = applyService.getApplyById(id);
         model.addAttribute("apply", applyDTO);
         model.addAttribute("corporation", corporationVO);
-        return "/complain/corporation-review-complain";
+        return "complain/corporation-review-complain";
     }
 
     @PostMapping("/corporation/complain")
