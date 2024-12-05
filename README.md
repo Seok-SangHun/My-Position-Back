@@ -1,7 +1,7 @@
 # sanghun-position
 
 <h1><a href="http://team-position.site" target="_blank">사회 초년생을 위한 기업 실무 체험 솔루션 - 'POSITION'</a></h1>
-<h2>일반 ID: 'kim@example.com' / Password: '1234' </h2>
+<h2>일반 ID: 'kim@gmail.com' / Password: '1234' </h2>
 <h2>기업 ID: 'cj@gmail.com' / Password: '1234' </h2>
 <img src="https://github.com/user-attachments/assets/08156fec-26a6-48c9-8095-a94e642a69ca">
 
